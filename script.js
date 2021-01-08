@@ -3,7 +3,6 @@ let column = 1;
 
 function addRow(){
     let table = document.getElementById("table");
-//    table = table.getElementsByTagName("group")[0];
     let newRow = document.createElement("tr");
     
     for(let i = 0; i < column; i++){
@@ -17,8 +16,6 @@ function addRow(){
 
 function addColumn(){
     let table = document.getElementById("table");
-//    table = table.getElementsByClassName("group")[0];
-    
     for (let i = 0; i < row; i++) {
         let cell = document.createElement("td");
         table.rows[i].appendChild(cell); 
@@ -26,4 +23,22 @@ function addColumn(){
     column++;
 }
 
+
+function removeColumn(){
+    let table = document.getElementById("table");
+        if(column > 2){
+            for(let i =0; i<column; i++){
+                table.row[i].removeChild(table.rows[i].lastChild);
+            }
+        }
+    column--;
+}
+
+function removeRow(){
+    let table = document.getElementById("table");
+        if(row > 2){
+            table.removeChild(table.lastChild);
+            row--;
+        }
+}
 
