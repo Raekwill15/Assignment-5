@@ -20,6 +20,7 @@ function addColumn(){
         let cell = document.createElement("td");
         table.rows[i].appendChild(cell); 
     }
+
     column++;
 }
 
