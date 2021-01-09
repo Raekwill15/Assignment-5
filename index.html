@@ -26,6 +26,7 @@
                 <button id = "rmvRow" class = "Oprem" onclick="removeRow()"> Remove Row</button>
                 <button id = "addCol" class = "Opadd" onclick="addColumn()"> Add Column</button>
                 <button id = "rmvCol" class = "Oprem" onclick="removeColumn()"> Remove column</button>
+                 <p id="print"></p>
             </div>
 -->
 <!--
@@ -35,19 +36,25 @@
                 <button id = "rmvCol" class = "Opcolor" onclick="#"> Clear All Cell</button>
 -->
 
-<!--
-                <div class="dropdown">
-                    <button id="dropbtn">Colors</button>
-                    <div class="dropdown-content">
--->
-                     <select onchange="changeColor()">
+          
+          <select onchange="changeColor()">
                       <option id = "default"> Default</option>
                       <option id = "blue"> Blue</option>
                       <option id = "red"> Red </option>
                       <option id = "yellow"> Yellow </option>
                       <option id = "white"> White </option>
                       </select>
+          
+                      <div style="color: blue;" id="blue" onclick="addblue()"> Blue</div>
+                      <div style="color: red;" id="red" onclick="addred()"> Red </div>
+                      <div style="color: yellow;" id="yellow" onclick="addyellow()"> Yellow </div>
+          
+          
 <!--
+                <div class="dropdown">
+                    <button id="dropbtn">Colors</button>
+                    <div class="dropdown-content">
+
                     </div>
                 </div>
 -->

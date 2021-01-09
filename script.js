@@ -81,6 +81,7 @@ const removeColumn = () =>{
      numberCol--;
 }
 
+
 //const color = document.
 
 function changeColor(){
@@ -118,4 +119,27 @@ function setColor(){
     if(clicked === true && event.targetName.toLowerCase() === "td"){
         event.target.className = currentColor;
     }
+}
+=======
+//select color
+
+
+
+let selectcolor;
+let isblue = false;
+let isred = false;
+let isyellow = false;
+
+const addblue = ()=>{
+    document.getElementById("print").innerHTML = `blue`
+    isblue = true;
+}
+
+const addred = ()=>{
+    document.getElementById("print").innerHTML = `red`
+    isred = true;
+}
+const addyellow = ()=>{
+    document.getElementById("print").innerHTML = `Yellow`
+    isyellow = true;
 }
