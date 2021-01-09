@@ -12,35 +12,62 @@
 
     <body>
         <!--Buttons and dropdown menu-->
+        
+        
+        <button onclick="addRow()">Add a row</button>
+            <button onclick="addColumn()">Add a column</button>
+            <button onclick="removeRow()">Remove a row</button>
+            <button onclick="removeColumn()">Remove a column</button>
+            
         <div class="navbar">
+<!--
             <div id="but">
                 <button id = "addRow" class = "Opadd" onclick="addRow()"> Add Row</button>
                 <button id = "rmvRow" class = "Oprem" onclick="removeRow()"> Remove Row</button>
                 <button id = "addCol" class = "Opadd" onclick="addColumn()"> Add Column</button>
                 <button id = "rmvCol" class = "Oprem" onclick="removeColumn()"> Remove column</button>
             </div>
+-->
+<!--
             <div id="menu">
                 <button id = "rmvRow" class = "Opcolor" onclick="#"> Fill All</button>
                 <button id = "addCol" class = "Opcolor" onclick="#"> Fill Uncolored Cell</button>
                 <button id = "rmvCol" class = "Opcolor" onclick="#"> Clear All Cell</button>
+-->
 
+<!--
                 <div class="dropdown">
                     <button id="dropbtn">Colors</button>
                     <div class="dropdown-content">
-                      <div style="color: blue;"> Blue</div>
-                      <div style="color: red;"> Red </div>
-                      <div style="color: yellow;"> Yellow </div>
-                      <div style="color: white;"> White </div>
+-->
+                     <select onchange="changeColor()">
+                      <option id = "default"> Default</option>
+                      <option id = "blue"> Blue</option>
+                      <option id = "red"> Red </option>
+                      <option id = "yellow"> Yellow </option>
+                      <option id = "white"> White </option>
+                      </select>
+<!--
                     </div>
                 </div>
+-->
             </div>
 
 
+<!--        </div>-->
+        
+        <div>
+            
+            
         </div>
     
         
         
-        <table id= "table"> </table>
+        <table id= "table">
+
+        
+         
+           </table>
 
 
 

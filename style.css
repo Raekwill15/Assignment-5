@@ -57,4 +57,31 @@
   .dropdown:hover #dropbtn {background-color: #3e8e41;}
   .dropdown-content div:hover {background-color:aquamarine;}
 
+td {
+    height: 40px;
+    width: 40px; 
+}
+
+td.default {
+    background: #e6e6e6;
+}
+
+td.blue {
+    background: blue;
+}
+
+td.red {
+    background: red;
+}
+
+td.yellow {
+    background: yellow;
+}
+
+td.white {
+    background: white;
+}
+
+
+
 
