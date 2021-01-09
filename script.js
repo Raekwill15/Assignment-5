@@ -61,3 +61,5 @@ const removeColumn = () =>{
     })
      numberCol--;
 }
+
+//const color = document.

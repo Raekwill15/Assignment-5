@@ -13,17 +13,26 @@
     <body>
         <!--Buttons and dropdown menu-->
         <div class="navbar">
-            <button id = "addRow" class = "Op" onclick="addRow()"> Add Row</button>
-            <button id = "rmvRow" class = "Op" onclick="removeRow()"> Remove Row</button>
-            <button id = "addCol" class = "Op" onclick="addColumn()"> Add Column</button>
-            <button id = "rmvCol" class = "Op" onclick="removeColumn()"> Remove column</button>
-            <select id = "color-select">
-                <option value = "">Colors</option>
-                <option value = "blue"> Blue</option>
-                <option value = "red"> Red </option>
-                <option value = "Yellow"> Yellow </option>
-                <option value = "white"> White</option>
-            </select>
+            <div id="but">
+                <button id = "addRow" class = "Opadd" onclick="addRow()"> Add Row</button>
+                <button id = "rmvRow" class = "Oprem" onclick="removeRow()"> Remove Row</button>
+                <button id = "addCol" class = "Opadd" onclick="addColumn()"> Add Column</button>
+                <button id = "rmvCol" class = "Oprem" onclick="removeColumn()"> Remove column</button>
+            </div>
+            <div id="menu">
+                <button id = "rmvRow" class = "Opcolor" onclick="#"> Fill All</button>
+                <button id = "addCol" class = "Opcolor" onclick="#"> Fill Uncolored Cell</button>
+                <button id = "rmvCol" class = "Opcolor" onclick="#"> Clear All Cell</button>
+
+                <div class="dropdown">
+                    <button id="dropbtn">Colors</button>
+                    <div class="dropdown-content">
+                      <div style="color: blue;"> Blue</div>
+                      <div style="color: red;"> Red </div>
+                      <div style="color: yellow;"> Yellow </div>
+                      <div style="color: white;"> White </div>
+                    </div>
+                </div>
             </div>
 
 
