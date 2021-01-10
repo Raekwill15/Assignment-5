@@ -1,5 +1,16 @@
 
+
+
 let numberCol = 0; // contains the number of column
+
+
+
+let numOfColors = 5;
+let currentColor = "default";
+let clicked = false;
+
+
+
 
 
 
@@ -14,10 +25,14 @@ const addRow = ()=>{
 
     for(let i=0; i<numberCol; i++){
         const cell = document.createElement("td");
+        
         cell.style.border = "2px solid black"
         cell.style.width = "30px"
         cell.style.padding ="10px"
-        cell.classList.add("cell", "blank");
+        cell.setAttribute("class", "default");
+        cell.setAttribute("onclick", "this.className = currentColor");
+        cell.setAttribute("onmousedown", "this.className = currentColor");
+//        cell.classList.add("cell", "blank");
         row.appendChild(cell);
     }
 }
@@ -33,10 +48,13 @@ const addColumn = () =>{
 
         arrayrow.forEach((value)=>{
             const cell = document.createElement("td");
+           
             cell.style.border = "2px solid black"
             cell.style.width = "30px"
             cell.style.padding ="10px"
-            cell.classList.add("cell", "blank");
+             cell.setAttribute("class", "default");
+            cell.setAttribute("onclick", "this.className = currentColor");
+            cell.setAttribute("onmousedown", "this.className = currentColor");
             value.appendChild(cell)
         })
      
@@ -62,46 +80,54 @@ const removeColumn = () =>{
      numberCol--;
 }
 
-//select color
+//const color = document.
 
-
-
-let selectcolor;
-let isblue = false;
-let isred = false;
-let isyellow = false;
-
-const addblue = ()=>{
-    selectcolor = "BLUE"
-    document.getElementById("print").innerHTML = selectcolor
-    isblue = true;
+function changeColor(){
+    if(document.getElementById("default").selected == true){
+        currentColor = "default";
+    }else if(document.getElementById("blue").selected == true){
+        currentColor = "blue";
+    }else if(document.getElementById("red").selected == true){
+        currentColor = "red";
+    }else if(document.getElementById("yellow").selected == true){
+        currentColor = "yellow";
+    }else if(document.getElementById("white").selected == true){
+        currentColor = "white";
+    }
 }
 
-const addred = ()=>{
-    selectcolor = "RED"
-    document.getElementById("print").innerHTML = selectcolor
-    isred = true;
-}
-const addyellow = ()=>{
-    selectcolor = "YELLOW"
-    document.getElementById("print").innerHTML = selectcolor
-    isyellow = true;
-}
 
-const cellList = document.getElementsByTagName("td");
-const cellarray = Array.from(cellList);
 
-// arrayrow.forEach((Event) =>{
-//     const tabecolor = Event.getElementsByTagName(Event);
-//     console.log(tabecolor)
-//     tabecolor.addEventListener('click',addred, false)
-// })
 
-const addcol = (event) =>{
-    event.style.backgroundColor ="red"
-    console.log(table)
+
+
+
+function isClicked(){
+    clicked = true;
 }
 
-document.getElementsByClassName("myBtn").addEventListener("click", function() {
-    alert("Hello World!");
-  });
+function isNotClicked(){
+    clicked = false;
+}
+function setColor(){
+    if(clicked === true && event.targetName.toLowerCase() === "td"){
+        event.target.className = currentColor;
+    }
+}
+
+document.addEventListener("mousedown", isClicked);
+document.addEventListener("mouseup", isNotClicked);
+document.addEventListener("mouseover", setColor);
+
+function  Fillall(){
+    
+    const cellList = document.getElementsByTagName("td"); 
+    
+    const cellarray = [...cellList];
+    ///console.log(cellarray);
+    cellarray.forEach((value) => {
+        console.log(value)
+        value.style.backgroundColor = currentColor;
+    })
+
+}
