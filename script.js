@@ -1,7 +1,7 @@
 
 let numberCol = 0; // contains the number of column
 
-const arrayCells = document.getElementsByTagName("td");
+
 
 const addRow = ()=>{
 
@@ -72,18 +72,36 @@ let isred = false;
 let isyellow = false;
 
 const addblue = ()=>{
-    document.getElementById("print").innerHTML = `blue`
+    selectcolor = "BLUE"
+    document.getElementById("print").innerHTML = selectcolor
     isblue = true;
 }
 
 const addred = ()=>{
-    document.getElementById("print").innerHTML = `red`
+    selectcolor = "RED"
+    document.getElementById("print").innerHTML = selectcolor
     isred = true;
 }
 const addyellow = ()=>{
-    document.getElementById("print").innerHTML = `Yellow`
+    selectcolor = "YELLOW"
+    document.getElementById("print").innerHTML = selectcolor
     isyellow = true;
 }
 
+const cellList = document.getElementsByTagName("td");
+const cellarray = Array.from(cellList);
 
+// arrayrow.forEach((Event) =>{
+//     const tabecolor = Event.getElementsByTagName(Event);
+//     console.log(tabecolor)
+//     tabecolor.addEventListener('click',addred, false)
+// })
 
+const addcol = (event) =>{
+    event.style.backgroundColor ="red"
+    console.log(table)
+}
+
+document.getElementsByClassName("myBtn").addEventListener("click", function() {
+    alert("Hello World!");
+  });
