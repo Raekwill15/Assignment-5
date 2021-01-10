@@ -115,6 +115,7 @@ function setColor(){
     }
 }
 
+
 document.addEventListener("mousedown", isClicked);
 document.addEventListener("mouseup", isNotClicked);
 document.addEventListener("mouseover", setColor);
@@ -131,6 +132,7 @@ function  Fillall(){
     })
 
 }
+//Return all cell colors to default
 function clearCells() {
     var grid = document.getElementsByTagName("td")
     cellList = [...grid]
@@ -140,5 +142,13 @@ function clearCells() {
     })
 }
 
-//test
+//Makes all uncolored cells into the selected color
+function fillUncoloredCells() {
+    var grid = document.getElementsByTagName("td")
+    cellList = [...grid]
 
+    cellList.forEach((cell) => {
+        if (cell.className === "default")
+        cell.className = currentColor
+    })
+}
