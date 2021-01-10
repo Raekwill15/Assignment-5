@@ -129,3 +129,12 @@ function clearCells() {
     })
 }
 
+function fillUncoloredCells() {
+    var grid = document.getElementsByTagName("td")
+    cellList = [...grid]
+
+    cellList.forEach((cell) => {
+        if (cell.className === "default")
+        cell.className = currentColor
+    })
+}
