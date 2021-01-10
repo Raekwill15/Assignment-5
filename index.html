@@ -36,28 +36,26 @@
                 <button id = "rmvCol" class = "Opcolor" onclick="#"> Clear All Cell</button>
 -->
 
-          
-          <select onchange="changeColor()">
-                      <option id = "default"> Default</option>
-                      <option id = "blue"> Blue</option>
-                      <option id = "red"> Red </option>
-                      <option id = "yellow"> Yellow </option>
-                      <option id = "white"> White </option>
-                      </select>
-          
-                      <div style="color: blue;" id="blue" onclick="addblue()"> Blue</div>
-                      <div style="color: red;" id="red" onclick="addred()"> Red </div>
-                      <div style="color: yellow;" id="yellow" onclick="addyellow()"> Yellow </div>
-          
-          
 <!--
                 <div class="dropdown">
                     <button id="dropbtn">Colors</button>
                     <div class="dropdown-content">
-
+-->
+                     <select onchange="changeColor()">
+                      <option id = "default"> choose a color</option>
+                      <option id = "blue"> Blue</option>
+                      <option id = "red"> Red </option>
+                      <option id = "yellow"> Yellow </option>
+                      <option id = "purple"> Purple </option>
+                      </select>
+<!--
                     </div>
                 </div>
 -->
+            </div>
+            <div>
+                <button onclick="clearCells()">Clear all cells</button>
+                 <button onclick="fillAllCells()">Fill all cells</button>
             </div>
 
 
@@ -71,7 +69,9 @@
         
         
         <table id= "table">
-
+                <grid>
+                    
+                </grid>
         
          
            </table>
