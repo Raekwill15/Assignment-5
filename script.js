@@ -3,7 +3,7 @@
 
 let numberCol = 0; // contains the number of column
 
-const arrayCells = document.getElementsByTagName("td");
+
 
 let numOfColors = 5;
 let currentColor = "default";
@@ -56,8 +56,12 @@ const addColumn = () =>{
              cell.setAttribute("class", "default");
             cell.setAttribute("onclick", "this.className = currentColor");
             cell.setAttribute("onmousedown", "this.className = currentColor");
-//            cell.setAttribute("onmouseover", "this.className = currentColor");
+          //            cell.setAttribute("onmouseover", "this.className = currentColor");
 //            cell.classList.add("cell", "blank");
+
+
+
+
             value.appendChild(cell)
         })
      
@@ -119,17 +123,50 @@ document.addEventListener("mouseover", function(event) {
 })
 
 
+function isNotClicked(){
+    clicked = false;
+}
+function setColor(){
+    if(clicked === true && event.targetName.toLowerCase() === "td"){
+        event.target.className = currentColor;
+    }
+}
 
 
+document.addEventListener("mousedown", isClicked);
+document.addEventListener("mouseup", isNotClicked);
+document.addEventListener("mouseover", setColor);
 
+function  Fillall(){
+    
+    const cellList = document.getElementsByTagName("td"); 
+    
+    const cellarray = [...cellList];
+    ///console.log(cellarray);
+    cellarray.forEach((value) => {
+        console.log(value)
+        value.style.backgroundColor = currentColor;
+    })
 
+}
+//Return all cell colors to default
+function clearCells() {
+    var grid = document.getElementsByTagName("td")
+    cellList = [...grid]
 
+    cellList.forEach((cell) => {
+      cell.className = "default"
+    })
+}
 
+//Makes all uncolored cells into the selected color
+function fillUncoloredCells() {
+    var grid = document.getElementsByTagName("td")
+    cellList = [...grid]
 
-
-
-
-
-
-
+    cellList.forEach((cell) => {
+        if (cell.className === "default")
+        cell.className = currentColor
+    })
+}
 
