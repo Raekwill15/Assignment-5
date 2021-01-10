@@ -7,7 +7,7 @@ let numberCol = 0; // contains the number of column
 
 let numOfColors = 5;
 let currentColor = "default";
-let clicked = false;
+
 
 
 
@@ -26,12 +26,13 @@ const addRow = ()=>{
     for(let i=0; i<numberCol; i++){
         const cell = document.createElement("td");
         
-        cell.style.border = "2px solid black"
-        cell.style.width = "30px"
-        cell.style.padding ="10px"
+//        cell.style.border = "2px solid black"
+//        cell.style.width = "30px"
+//        cell.style.padding ="10px"
         cell.setAttribute("class", "default");
         cell.setAttribute("onclick", "this.className = currentColor");
         cell.setAttribute("onmousedown", "this.className = currentColor");
+//        cell.setAttribute("onmouseover", "this.className = currentColor");
 //        cell.classList.add("cell", "blank");
         row.appendChild(cell);
     }
@@ -49,12 +50,18 @@ const addColumn = () =>{
         arrayrow.forEach((value)=>{
             const cell = document.createElement("td");
            
-            cell.style.border = "2px solid black"
-            cell.style.width = "30px"
-            cell.style.padding ="10px"
+//            cell.style.border = "2px solid black"
+//            cell.style.width = "30px"
+//            cell.style.padding ="10px"
              cell.setAttribute("class", "default");
             cell.setAttribute("onclick", "this.className = currentColor");
             cell.setAttribute("onmousedown", "this.className = currentColor");
+          //            cell.setAttribute("onmouseover", "this.className = currentColor");
+//            cell.classList.add("cell", "blank");
+
+
+
+
             value.appendChild(cell)
         })
      
@@ -94,17 +101,27 @@ function changeColor(){
     }else if(document.getElementById("white").selected == true){
         currentColor = "white";
     }
+    console.log(currentColor);
 }
 
+let drag = false;
+document.addEventListener("mousedown", dragOn);
+document.addEventListener("mouseup", dragDown);
 
-
-
-
-
-
-function isClicked(){
-    clicked = true;
+function dragOn() {
+    drag = true;
 }
+
+function dragDown() {
+    drag = false;
+}
+
+document.addEventListener("mouseover", function(event) {
+    if (drag === true && event.target.tagName.toLowerCase() === "td") {
+        event.target.className = currentColor;
+    }
+})
+
 
 function isNotClicked(){
     clicked = false;
@@ -152,3 +169,4 @@ function fillUncoloredCells() {
         cell.className = currentColor
     })
 }
+
