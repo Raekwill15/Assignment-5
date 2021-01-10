@@ -131,3 +131,12 @@ function  Fillall(){
     })
 
 }
+function clearCells() {
+    var grid = document.getElementsByTagName("td")
+    cellList = [...grid]
+
+    cellList.forEach((cell) => {
+      cell.className = "default"
+    })
+}
+
