@@ -120,6 +120,7 @@ function setColor(){
     }
 }
 
+//Return all cell colors to default
 function clearCells() {
     var grid = document.getElementsByTagName("td")
     cellList = [...grid]
@@ -129,6 +130,7 @@ function clearCells() {
     })
 }
 
+//Makes all uncolored cells into the selected color
 function fillUncoloredCells() {
     var grid = document.getElementsByTagName("td")
     cellList = [...grid]
