@@ -142,10 +142,10 @@ function  Fillall(){
     const cellList = document.getElementsByTagName("td"); 
     
     const cellarray = [...cellList];
-    ///console.log(cellarray);
     cellarray.forEach((value) => {
         console.log(value)
-        value.style.backgroundColor = currentColor;
+        value.className = currentColor;
+        
     })
 
 }
