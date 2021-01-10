@@ -26,14 +26,11 @@ const addRow = ()=>{
     for(let i=0; i<numberCol; i++){
         const cell = document.createElement("td");
         
-//        cell.style.border = "2px solid black"
-//        cell.style.width = "30px"
-//        cell.style.padding ="10px"
+
         cell.setAttribute("class", "default");
         cell.setAttribute("onclick", "this.className = currentColor");
         cell.setAttribute("onmousedown", "this.className = currentColor");
-//        cell.setAttribute("onmouseover", "this.className = currentColor");
-//        cell.classList.add("cell", "blank");
+
         row.appendChild(cell);
     }
 }
@@ -50,14 +47,11 @@ const addColumn = () =>{
         arrayrow.forEach((value)=>{
             const cell = document.createElement("td");
            
-//            cell.style.border = "2px solid black"
-//            cell.style.width = "30px"
-//            cell.style.padding ="10px"
+
              cell.setAttribute("class", "default");
             cell.setAttribute("onclick", "this.className = currentColor");
             cell.setAttribute("onmousedown", "this.className = currentColor");
-          //            cell.setAttribute("onmouseover", "this.className = currentColor");
-//            cell.classList.add("cell", "blank");
+ 
 
 
 
@@ -137,6 +131,8 @@ document.addEventListener("mousedown", isClicked);
 document.addEventListener("mouseup", isNotClicked);
 document.addEventListener("mouseover", setColor);
 
+
+// the function that fill all the cells with the current color
 function  Fillall(){
     
     const cellList = document.getElementsByTagName("td"); 

@@ -4,56 +4,61 @@
         <meta charset = "UTF-8"/>
         <title>Assignment 5</title>
         <link rel = "stylesheet" href = "style.css">
-        <script src="script.js">
-
-        </script>
+        <script src="script.js"></script>
 
     </head>
 
     <body>
-        <!--Buttons and dropdown menu-->
-        
-        
-        <button onclick="addRow()">Add a row</button>
-            <button onclick="addColumn()">Add a column</button>
-            <button onclick="removeRow()">Remove a row</button>
-            <button onclick="removeColumn()">Remove a column</button>
+    
+        <div id="nav-bar">
             
-        <div class="navbar">
-
-                     <select onchange="changeColor()">
-                      <option id = "default"> choose a color</option>
-                      <option id = "blue"> Blue</option>
-                      <option id = "red"> Red </option>
-                      <option id = "yellow"> Yellow </option>
-                      </select>
-
+            <div class="fillsection">
+        
+                <div id="add-and-remove">
+                    <div >
+                        <button onclick="addRow()"  class="addColor">Add a row</button>
+                        <button onclick="addColumn()" class="addColor">Add a column</button>
+                    </div>
+                    <div>
+                        <button onclick="removeRow()" class="removeColor">Remove a row</button>
+                        <button onclick="removeColumn()" class="removeColor">Remove a column</button>
+                    </div>
+                </div>
+                <div class="section">
+                    <select onchange="changeColor()">
+                        <option id = "default"> choose a color</option>
+                        <option id = "blue"> Blue</option>
+                        <option id = "red"> Red </option>
+                        <option id = "yellow"> Yellow </option>
+                    </select>
+               </div>
             </div>
-            <div>
-                <button onclick="clearCells()">Clear all cells</button>
-  
 
-                 <button onclick="Fillall()">Fill all cells</button>
-                  <button onclick="fillUncoloredCells()">Fill Uncolored Cells</button>
+            <div id="colorsection">
+
+               <div class="low"> <button onclick="clearCells()" class="low">Clear all cells</button> </div> 
+               <div class="up">  <button onclick="Fillall()" class="up">Fill all cells</button>    </div>
+               <div class = "low">  <button onclick="fillUncoloredCells()" class="low">Fill Uncolored Cells</button>  </div> 
+
+
+    
             </div>
 
-
-        <!-- test-->
-        
-        <div>
-            
-            
         </div>
+
     
         
-        
-        <table id= "table">
+       <div id="container">
+
+            <table id= "table">
+
                 <grid>
-                    
+                        
                 </grid>
-        
-         
-           </table>
+            
+            </table>
+       </div>  
+ 
 
 
 

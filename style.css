@@ -1,62 +1,82 @@
-.Opadd{
-   background-color:cyan;
-   padding: 10px;
-   border-radius: 0.8em;
-}
-.Oprem{
-    background-color:bisque;
-    padding: 10px;
- }
- .Opcolor{
-    background-color:aquamarine;
-    padding: 10px;
- }
+/*
 
-.navbar {
-    height: 120px;
-    margin: 0 auto;
-    display: flex;
+#dropdown-content 
+.dropdown:hover #dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color:aquamarine;}
+
+#dropdown-content option {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+} */
+select{
+  background-color:#d8d0d0;
+  color: rgba(8, 109, 8, 0.404);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
 }
-#but{
-    padding-top: 10px;
-    flex: 2;
-    display: block;
+
+#nav-bar{
+  display: flex;
+  height: 120px;
+  background-color: beige;
+  box-shadow: 2px 5px #888888;
 }
-#menu{
+#colorsection{
   flex: 1;
-}
-.dropdown {
-    position: relative;
-    display:inline-block;
-  }
-#dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    border-radius: 1em;
-    margin-left: 110px;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color:#f1f1f1;
-    min-width: 80px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    margin-left: 110px;
-  }
-  .dropdown-content div {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  .dropdown:hover .dropdown-content {display: block; border-radius: 1em;}
+  display: flex;
 
-  .dropdown:hover #dropbtn {background-color: #3e8e41;}
-  .dropdown-content div:hover {background-color:aquamarine;}
+}
+.fillsection{
+  flex:1;
+  display: flex;
+}
+#add-and-remove{
+
+  flex: 1;
+  padding-left: 15px;
+}
+.section{
+  flex: 1;
+  padding-left: 50px;
+  padding-top: 25px;
+}
+
+button{
+  height: 50px;
+  width: 110px;
+ 
+}
+
+#container{
+  position:-ms-page;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+.low{
+  flex: 1;
+  margin-top:20px;
+  border-radius: 0.8em;
+}
+.up{
+flex: 1;
+margin-top:10px;
+border-radius: 0.8em;
+}
+
+.addColor{
+  background-color: rgb(86, 241, 86);
+  border-radius: 00.8em;
+
+}
+.removeColor{
+  background-color: rgb(243, 109, 109);
+  border-radius: 00.8em;
+}
 
 td {
     height: 40px;
